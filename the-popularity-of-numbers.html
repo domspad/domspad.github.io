@@ -64,19 +64,34 @@
   </header>
   <footer class="post-info">
     <abbr>
-      Tue 19 May 2015 
+      Thu 21 May 2015 
          By <a class="url fn" href="/author/dominic-spadacene.html">Dominic Spadacene</a>
   
     </abbr>
   </footer><!-- /.post-info -->
   <div class="entry-content">
-    <p><img alt="A picture?" src="/images/google_hits.png" /></p>
-  </div><!-- /.entry-content -->
-  <div>
-    <a href="https://plot.ly/~domspad/7/" target="_blank" title="wiki, not wiki, best fit" style="display: block; text-align: center;"><img src="https://plot.ly/~domspad/7.png" alt="wiki, not wiki, best fit" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="domspad:7" src="https://plot.ly/embed.js" async></script>
-   </div>
+    <!-- ![A picture?]({filename}/images/google_hits.png) -->
 
+<p>Here's a curious image</p>
+<div>
+    <a href="https://plot.ly/~domspad/37/" target="_blank" title="How Many Results for Googling Numbers" style="display: block; text-align: center;"><img src="https://plot.ly/~domspad/37.png" alt="How Many Results for Googling Numbers" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="domspad:37" src="https://plot.ly/embed.js" async></script>
+</div>
+
+<p>What this plot shows is how many 'results' Google returned when querying the number
+on the horizontal axis. So if you google '1' you'll probably get 25,270,000,000 results, and if you google '101412043' maybe you'll get 668 results. </p>
+<p>I came across the data by accident when I was in haste of writing a threaded program that crawls websites (the other thing I learned coming out of that is that Google doesn't like to talk to bots). </p>
+<p>But back to the pretty picture.</p>
+<p>The weird thing is that there's actually a relationship here. The plot above is a "loglog" plot so with normally-scaled axes it would actually look like this.</p>
+<div>
+    <a href="https://plot.ly/~domspad/38/" target="_blank" title="How Many Results for Googling Numbers" style="display: block; text-align: center;"><img src="https://plot.ly/~domspad/38.png" alt="How Many Results for Googling Numbers" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="domspad:38" src="https://plot.ly/embed.js" async></script>
+</div>
+
+<p>Not as vivid. But the relationship is there, and it looks like this :</p>
+<p>$$ f(N) = \frac{B}{N} $$</p>
+<p>Oh another weird phenomenon to try while your laundry is drying -- if you start googling a number, then you google the number that appears as its amount of search results, and you do the same for its number of results, etc. you'll converge to around 500,000. </p>
+  </div><!-- /.entry-content -->
 </section>
             <hr/>
             <footer id="contentinfo" class="footer">
