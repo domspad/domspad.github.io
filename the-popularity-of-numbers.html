@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Spadacene</title>
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+        <link rel="stylesheet" href="/theme/css/font-awesome.css" type="text/css" />
+        <meta charset="utf-8" />
+      
+
+        <!-- Javascript-->
+        <script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        <script async type="text/javascript"> 
+        $(function() {
+            function invisibleMenu() {
+                var now = 0;
+                var pixels = 300;
+                var opacity = -1;
+
+                var move = function() {
+                    now = $(window).scrollTop();
+                    if (now > pixels && opacity !== 0)
+                        opacity = 0;
+                    else if (now < pixels){
+                        // Depends on the position not if scrolls down or up
+                        opacity = (1 - now/pixels);
+                    }
+                    $("div.navigation").css({"opacity": opacity});
+                }
+                $(window).scroll(move);
+                move();
+            }
+            invisibleMenu();
+          });
+          </script> 
+</head>
+
+<body id="index" class="home">
+     <div class="navigation">
+        <ol class="nav">
+          <li class="current"><a href="">Blog</a> </li>
+          <li><a href="/archives.html">Archive</a></li>
+          <li><a href="/tags.html">Tags</a> </li>
+          <li><a href="">RSS</a> </li>
+        </ol>
+      </div>
+        <header id="banner" class="body">
+                <div class="banner"><a href="">Spadacene <strong></strong></a></div>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+        <div class="box">
+<section id="content" class="body">
+  <header class="post">
+    <h1 class="entry-title">
+      The Popularity of Numbers
+    </h1>
+  </header>
+  <footer class="post-info">
+    <abbr>
+      Thu 21 May 2015 
+         By <a class="url fn" href="/author/dominic-spadacene.html">Dominic Spadacene</a>
+  
+    </abbr>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <!-- ![A picture?]({filename}/images/google_hits.png) -->
+
+<p>Here's a curious image</p>
+<div>
+    <a href="https://plot.ly/~domspad/37/" target="_blank" title="How Many Results for Googling Numbers" style="display: block; text-align: center;"><img src="https://plot.ly/~domspad/37.png" alt="How Many Results for Googling Numbers" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="domspad:37" src="https://plot.ly/embed.js" async></script>
+</div>
+
+<p>What this plot shows is how many 'results' Google returned when querying the number
+on the horizontal axis. So if you google '1' you'll probably get 25,270,000,000 results, and if you google '101412043' maybe you'll get 668 results. </p>
+<p>I came across the data by accident when I was in haste of writing a threaded program that crawls websites (the other thing I learned coming out of that is that Google doesn't like to talk to bots). </p>
+<p>But back to the pretty picture.</p>
+<p>The weird thing is that there's actually a relationship here. The plot above is a "loglog" plot so with normally-scaled axes it would actually look like this.</p>
+<div>
+    <a href="https://plot.ly/~domspad/38/" target="_blank" title="How Many Results for Googling Numbers" style="display: block; text-align: center;"><img src="https://plot.ly/~domspad/38.png" alt="How Many Results for Googling Numbers" style="max-width: 100%;"  onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="domspad:38" src="https://plot.ly/embed.js" async></script>
+</div>
+
+<p>Not as vivid. But the relationship is there, and it looks like this :</p>
+<p>$$ f(N) = \frac{B}{N} $$</p>
+<p>Oh another weird phenomenon to try while your laundry is drying -- if you start googling a number, then you google the number that appears as its amount of search results, and you do the same for its number of results, etc. you'll converge to around 500,000. </p>
+  </div><!-- /.entry-content -->
+</section>
+            <hr/>
+            <footer id="contentinfo" class="footer">
+                <div>
+                    <a href="">Dominic Spadacene</a> (2012)
+                </div>
+                <div>
+                    This work is licensed under <a rel="license" href="http://opensource.org/licenses/bsd-3-clause">3 clause BSD</a>. Source code available on <a rel="source code" href="https://github.com/slok/blog">Github</a>
+                </div>
+                <div>
+                    powered by <a href="http://getpelican.com/">Pelican</a>
+                    and <a href="http://python.org">Python</a>. 
+                    <a href="http://github.com/slok/iris">Theme</a> by <a href="http://xlarrakoetxea.org">Xabier Larrakoetxea</a> based on <a href="http://flask.pocoo.org/">Flask</a> theme
+                </div>
+                <div>
+                    Social icons (font awesome) by <a href="http://fortawesome.github.com/Font-Awesome/"> fort awesome</a>.
+                    <a href="http://www.google.com/webfonts/specimen/The+Girl+Next+Door">Title</a>, <a href="http://www.google.com/webfonts/specimen/Marcellus">headers</a> and <a href="http://www.google.com/webfonts/specimen/Inconsolata">source code</a> fonts by google fonts
+                </div>
+                <div class="social">
+                        <a href="#"><i class="icon-You can add links in your config file"></i>  </a>
+                        <a href="#"><i class="icon-Another social link"></i>  </a>
+                </div>
+            </footer><!-- /#contentinfo -->
+        </div>
+        <!--Add statistycs-->
+
+</body>
+</html>
