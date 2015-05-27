@@ -89,64 +89,21 @@ on the horizontal axis. So if you google '1' you'll probably get 25,270,000,000 
 </div>
 
 <p>Not as vivid. But the relationship is there, and it looks like this :</p>
-<div class="math">\begin{equation}
- f(N) = \frac{10^{10}}{N} 
-\end{equation}</div>
-<p>Oh another weird phenomenon to try while your laundry is drying -- if you start googling a number, then you google the number that appears as its amount of search results, and you do the same for its number of results, etc. you'll converge to around 500,000. </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+<!-- linking to tex code -->
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-    
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
+<div style="text-align:center">
+<a href="http://www.codecogs.com/eqnedit.php?latex=f(n)&space;=&space;\frac{10^{11.5}}{n}&space;=\frac{300\text{&space;Billion}}{n}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?f(n)&space;=&space;\frac{10^{11.5}}{n}&space;\approx\frac{300\text{&space;Billion}}{n}" title="f(n) = \frac{10^{11.5}}{n} =\frac{300\text{ Billion}}{n}" /></a>
+</div>
+
+<!-- put in an image straight with html -->
+
+<!-- <div style="text-align:center"><img src ="/images/google_eqn.gif" /></div> -->
+
+<!-- one way to put in an image with markdown (but not centered) -->
+
+<!-- ![The Equation]({filename}/images/google_eqn.gif) -->
+
+<p>Oh another weird phenomenon to try while your laundry is drying -- if you start googling a number, then you google the number that appears as its amount of search results, and you do the same for its number of results, etc. you'll converge to around 500,000. </p>
   </div><!-- /.entry-content -->
 </section>
             <hr/>
