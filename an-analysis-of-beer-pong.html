@@ -71,9 +71,79 @@
     </abbr>
   </footer><!-- /.post-info -->
   <div class="entry-content">
-    <div style="text-align:center"><img src ="/images/single_cup.jpg" width="600" /></div>
+    <p>What's the probability you will make a shot in beer pong, with all cups still on the table? <b>Probably less than 40%!</b></p>
+<div style="text-align:center"><img src ="/images/beer_pong_game.jpg" width="300" /></div>
 
-<div style="text-align:center"><img src ="/images/beer_pong_all.jpg" width="600" /></div>
+<p>This post is a dedication to all those beer pong matches I never won. I had the opportunity to play the game recently, and it sparked some thought after I had read about a famous problem in probability <a href="http://en.wikipedia.org/wiki/Buffon%27s_needle">Buffon's Needle</a> : </p>
+<blockquote>
+<div class="highlight"><pre>      Imagine dropping a needle onto a hardwood floor, made of panels of equal
+      width. What is the probability that the needle will come to rest lying
+      across a crack between two boards?
+</pre></div>
+
+
+</blockquote>
+<!-- ```
+Imagine dropping a needle onto a hardwood floor, made of panels of equal
+width. What is the probability that the needle will come to rest lying
+across a crack between two boards?
+```
+
+> <b>Imagine dropping a needle onto a hardwood floor, made of panels of equal width. What is the probability that the needle will come to rest lying across a crack between two boards?</b> -->
+
+<!-- Even crazier about this, is that you can use this experiment to estimate the value of \pi to a scary degree of precision. -->
+
+<p>In solving the problem, we consider the possible arrangements of the needle and the floorboards. We can do the same with beer pong! </p>
+<p>To get a rough estimate of likelihood of sinking a beer pong shot just based on the areas covered by the solo cups and ping pong ball. </p>
+<div style="text-align:center">
+    <img src ="/images/single_cup.jpg" width="400" />
+<!--    <div style='width: 130px; text-align: center;'>I just love to visit this most beautiful place in all the world.</div> -->
+    <figcaption> Shaded area represents where center of ping pong must land for ball land into the cup without touching the sides of the cup</figcaption>
+</div>
+
+<p>Surprisingly, despite the fact that roughly 80% of the triangle outlining the cups is covered by the openings of the cups, less than 40% of that area is good for sinking the ball.</p>
+<div style="text-align:center">
+    <img src ="/images/beer_pong_all.jpg" width="600" />
+    <figcaption> figure not drawn to scale, or good</figcaption>
+
+</div>
+
+<p>The main assumption here is that your shot is equally likely to land anywhere within the triangle of solo cups (a dubious assumption when playing with the well-practiced frat guy).</p>
+<p>And here are the formulas for the various values above... </p>
+<p>The area covered by the solo cups : 
+<div style="text-align:center"><img src ="/images/n_cup_area.gif"/></div></p>
+<p>The area of the surrounding triangle : 
+<div style="text-align:center"><img src ="/images/tri_area.gif"/></div></p>
+<p>which is derived from the side length : 
+<div style="text-align:center"><img src ="/images/tri_side_length.gif"/></div></p>
+<p>and the formula for the area of an equilateral triagle :
+<div style="text-align:center"><img src ="/images/tri_area_form.gif"/></div></p>
+<p>The sum of the shaded areas depends on what we allow to be plausible for the ball to enter the cup. Can the ball nick the side and go in still? By how much? I take a range between just nicking the side and striking the edge of the cup at a 45 degree angle. 
+<div style="text-align:center"><img src ="/images/n.gif"/></div></p>
+<div style="text-align:center"><img src ="/images/r_cup.gif"/></div>
+
+<div style="text-align:center"><img src ="/images/r_shaded.gif"/></div>
+
+<p>Using these values will yeild the above table.</p>
+<!-- Using the measurements
+
+R := \text{radius of solo cup} 
+\newline
+r := \text{radius of ping pong ball}
+\newline
+\text{Area of solo cups} = \pi R^2 \frac{n(n+1)}{2}
+\newline
+\text{Area of make shot} = \pi r^2 \frac{n(n+1)}{2}
+\newline
+\text{Side length of triangle} = 2(R+R\sqrt{3})+2R(n-2)
+\newline
+\text{Area of triangle} = \frac{\sqrt{3}}{4}({\text{side length}})^2
+\newline
+= \frac{\sqrt{3}}{4}\left[2(R+R\sqrt{3})+2R(n-2)\right]^2
+\newline
+= 2\sqrt{3}\left[2R(n-1+\sqrt{3})\right]^2
+
+2 \text{ cm}\leq r_{solo cup} \leq 3.35 \text{ cm} -->
   </div><!-- /.entry-content -->
 </section>
             <hr/>
