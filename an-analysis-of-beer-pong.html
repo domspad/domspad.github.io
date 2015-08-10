@@ -8,9 +8,9 @@
         <link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
         
         <!-- CSS -->
-        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
-        <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
-        <link rel="stylesheet" href="/theme/css/font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="http://domspad.github.io/theme/css/main.css" type="text/css" />
+        <link rel="stylesheet" href="http://domspad.github.io/theme/css/pygments.css" type="text/css" />
+        <link rel="stylesheet" href="http://domspad.github.io/theme/css/font-awesome.css" type="text/css" />
         <meta charset="utf-8" />
       
 
@@ -44,17 +44,17 @@
 <body id="index" class="home">
      <div class="navigation">
         <ol class="nav">
-          <li class="current"><a href="">Blog</a> </li>
-          <li><a href="/archives.html">Archive</a></li>
-          <li><a href="/pages/about.html">About</a></li>
-          <li><a href="/pages/gallery.html">Gallery</a></li>
-<!--           <li><a href="/tags.html">Tags</a> </li>
+          <li class="current"><a href="http://domspad.github.io">Blog</a> </li>
+          <li><a href="http://domspad.github.io/archives.html">Archive</a></li>
+          <li><a href="http://domspad.github.io/pages/about.html">About</a></li>
+          <li><a href="http://domspad.github.io/pages/gallery.html">Gallery</a></li>
+<!--           <li><a href="http://domspad.github.io/tags.html">Tags</a> </li>
           <li><a href="">RSS</a> </li> -->
         </ol>
       </div>
         <header id="banner" class="body">
                 <div class="banner">
-                    <a href="">
+                    <a href="http://domspad.github.io">
                     Peek Pok
                     <strong style="font-size:35px;">
                         Experiments on the Internet
@@ -63,7 +63,7 @@
              </div>
         </header><!-- /#banner -->
 <!--         <nav id="menu"><ul>
-            <li class="active"><a href="/category/articles.html">articles</a></li>
+            <li class="active"><a href="http://domspad.github.io/category/articles.html">articles</a></li>
         </ul></nav> --><!-- /#menu -->
         <div class="box">
 <section id="content" class="body">
@@ -75,13 +75,13 @@
   <footer class="post-info">
     <abbr>
       Sat 06 June 2015 
-         By <a class="url fn" href="/author/dominic-spadacene.html">Dominic Spadacene</a>
+         By <a class="url fn" href="http://domspad.github.io/author/dominic-spadacene.html">Dominic Spadacene</a>
   
     </abbr>
   </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>What's the probability you will make a shot in beer pong, with all cups still on the table? <b>Probably less than 40%!</b></p>
-<div style="text-align:center"><img src ="/images/beer_pong_game.jpg" width="300" /></div>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/beer_pong_game.jpg" width="300" /></div>
 
 <p>This post is a dedication to all those beer pong matches I never won. I had the opportunity to play the game recently, and it sparked some thought after I had read about a famous problem in probability <a href="http://en.wikipedia.org/wiki/Buffon%27s_needle">Buffon's Needle</a> : </p>
 <blockquote>
@@ -106,44 +106,44 @@ across a crack between two boards?
 <p>To get a rough estimate of likelihood of sinking a beer pong shot we consider where the ball may land within the entire triangle, and calculate the sum of the areas where, if the ball lands, it will go in a cup. </p>
 <p>The percentage of the total area will give a fair approximation of your ability to make a shot, assuming the ball is equally likely to land anywhere within the triangle (a dubious assumption when playing with the well-practiced frat guy).</p>
 <div style="text-align:center">
-    <img src ="/images/single_cup.jpg" width="400" />
+    <img src ="http://domspad.github.io/images/single_cup.jpg" width="400" />
 <!--    <div style='width: 130px; text-align: center;'>I just love to visit this most beautiful place in all the world.</div> -->
     <figcaption> Here, the shaded area represents where center of ping pong ball must land for the ball to land into the cup without touching the sides of the cup.</figcaption>
 </div>
 
 <p>Surprisingly, despite the fact that roughly 80% of the triangle outlining the cups is covered by the openings of the cups, less than 40% of that area is good for sinking the ball.</p>
 <div style="text-align:center">
-    <img src ="/images/beer_pong_all.jpg" width="600" />
+    <img src ="http://domspad.github.io/images/beer_pong_all.jpg" width="600" />
     <figcaption> figure not drawn to scale, or good</figcaption>
 
 </div>
 
 <p>The sum of the shaded areas depends on what we allow to be plausible for the ball to enter the cup. Can the ball nick the side and go in still? By how much? I take a range between just nicking the side and striking the edge of the cup at a 45 degree angle. </p>
-<div style="text-align:center"><img src ="/images/r_cup.gif"/></div>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/r_cup.gif"/></div>
 
-<div style="text-align:center"><img src ="/images/r_shaded.gif"/></div>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/r_shaded.gif"/></div>
 
 <p>Using these values will yeild the above table when combined with the formulas below. (note that 'n' represents the number of cups in the last row of the triangle, here n == 4)</p>
 <p>The area covered by the solo cups : 
-<div style="text-align:center"><img src ="/images/n_cup_area.gif"/></div></p>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/n_cup_area.gif"/></div></p>
 <p>The area of the surrounding triangle : 
-<div style="text-align:center"><img src ="/images/tri_area.gif"/></div></p>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/tri_area.gif"/></div></p>
 <p>which is derived from the side length : 
-<div style="text-align:center"><img src ="/images/tri_side_length.gif"/></div></p>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/tri_side_length.gif"/></div></p>
 <p>and the formula for the area of an equilateral triagle :
-<div style="text-align:center"><img src ="/images/tri_area_form.gif"/></div></p>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/tri_area_form.gif"/></div></p>
 <h3>What if the ENTIRE Earth were covered in ping pong balls, and we dropped the ball from space?</h3>
 <p>Or, in other words, what happens to the probability as we add more and more rows of cups? Here's a graphical depiction of the upper and lower bounds of the total area of the triangle covered by shaded area as n grows.</p>
 <p>Note that, since the beer pong layout is growing large, we require the ball to go into a cup on the first hit (i.e. we don't count it if it bounces from one cup into another).</p>
-<div style="text-align:center"><img src ="/images/beer_pong_limit.png" width="900"/></div>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/beer_pong_limit.png" width="900"/></div>
 
 <p>As it turns out, this relates to the famous problem of <a href="http://en.wikipedia.org/wiki/Circle_packing">Circle Packing</a>, where we try to achieve the densest possible packing of circles into a given area. As luck would have it, the solo cups are arranged in the densest possible layout for beer pong.
 &nbsp;
-<div style="text-align:center"><img src ="/images/limit_solo_cup.gif"/></div>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/limit_solo_cup.gif"/></div>
 &nbsp;
 But it, doesn't look like our luck as much improved even with a larger layout. Our probability just creeps up to <b>about 45%</b> on the upper end.
 &nbsp;</p>
-<div style="text-align:center"><img src ="/images/limit_shaded.gif"/></div>
+<div style="text-align:center"><img src ="http://domspad.github.io/images/limit_shaded.gif"/></div>
 
 <!-- Using the measurements
 
@@ -174,7 +174,7 @@ r^2\sqrt{3}\left( n - 1 + \sqrt{3} \right )^2
             <hr/>
             <footer id="contentinfo" class="footer">
                 <div>
-                    <a href="">Dominic Spadacene</a> (2012)
+                    <a href="http://domspad.github.io">Dominic Spadacene</a> (2012)
                 </div>
                 <div>
                     This work is licensed under <a rel="license" href="http://opensource.org/licenses/bsd-3-clause">3 clause BSD</a>. Source code available on <a rel="source code" href="https://github.com/slok/blog">Github</a>
