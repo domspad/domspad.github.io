@@ -4,20 +4,23 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <!-- <h1 class="page-heading">Posts</h1> -->
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <table> 
+  {% for post in site.posts reverse %}
+  <tr>
+<!--   <td style="width: 5.5em">
+  <time style="padding-right: 10px; color: #444; font-size: 14px;" datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
+  </td> -->
+  <td>
+  <span><a  style="font-family: Montserrat, sans-serif; color: black;font-size: 14px;" href="{{ / }}{{ post.url }}">{{post.title}}</a></span>
+  </td>
+  </tr>
+  {% endfor %}
+  </table>
+  <br><br>
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
 
 </div>
+
+
