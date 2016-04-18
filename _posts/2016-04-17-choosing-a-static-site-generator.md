@@ -17,3 +17,8 @@ Until recently I used to feel drunk on power that Python was the only language I
 
 My main decision came to between Jekyll (in Ruby) and Pelican (in Python). Both are pretty easy to install and set up (even if you don't know Ruby), Jekyll happens to interface with Github a bit easier if you are hosting your blog there, both have pretty simple command line tools to publish posts with a few commands, Jekyll has 5X the following as Pelican (could that be due to the size of the Ruby community?), and most importantly Jekyll seems to be much more [actively developed](https://github.com/jekyll/jekyll/graphs/contributors) still compared to [Pelican](https://github.com/getpelican/pelican/graphs/contributors).
 
+## Some tips when developing a Jekyll blog
+
+- The [Jekyll docs](https://jekyllrb.com/) are pretty well done. Take a look.
+- This short [article](http://jekyllbootstrap.com/lessons/jekyll-introduction.html) on how jekyll works will prevent some longterm frustrations potentially.
+- Look at how other people use it! Many people make public the source code behind their Jekyll blogs.
