@@ -4,7 +4,9 @@ date: 2016-04-27T23:28:03-05:00
 layout: post
 ---
 
-Sorry, no code for today...but even better: life advice! (ok code may be better)
+More valueable to your company that is. It may seem like that the guy who knows EMACS like a wizard is one of your company's strongest programmers, but at the end of the day, the company doesn't give two hoots about how well configured your text editor is. Instead, its the guy still developing via click and point GUI editors, but is the only one who *really* understands the widget toolkit that all of your company's programs develops on and often times has bugs. HE is the guy who your company won't want to lose.
+
+Here are some tips about becoming that kind of developer.
 
 # 1) Stop reading and start doing
 
