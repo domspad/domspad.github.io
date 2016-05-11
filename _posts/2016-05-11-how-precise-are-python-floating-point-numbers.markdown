@@ -16,6 +16,25 @@ Out[2]: False
 
 It's important to understand when the precision matters in your program. Almost all platforms map Python floats to [IEEE-754 “double precision”](http://steve.hollasch.net/cgindex/coding/ieeefloat.html), which contain *53 bits* of _binary_ precision (think a number like `10011010010100010010010101011101111111111011101110101`). In base-10 or decimal number system, this is roughly 17 digits (think since 10 is roughly `2**3`, so each decimal digit is roughly the same as 3 binary digits, so 53 binary digits is roughly 17 decimal digits).
 
+## Toy Example
+
+How "much" precision is 17 decimal digits? Well, let's take the Great Wall of China (roughly 10,000 km). 17 digits of precision gives us about 10 atoms width of precision!
+
+{% highlight python %}
+In [16]: great_wall = 10.**7   	# Great Wall ~ 10,000,000 meters
+
+In [17]: an_atom = 10**-10      # an atom is ~ 10^-10 meters
+
+In [18]: great_wall - an_atom == great_wall
+Out[18]: True
+
+In [19]: great_wall - (10*an_atom) == great_wall
+Out[19]: False
+{% endhighlight %} 
+
+
+## A Chart
+
 As proof, we can check a given number `x` by adding a very small number `epsilon`, to see how big `epsilon` can be before `x` and `x + epsilon` are "different". I've included some code below and its output(requires the python library [humanize](https://pypi.python.org/pypi/humanize)).
 
 
