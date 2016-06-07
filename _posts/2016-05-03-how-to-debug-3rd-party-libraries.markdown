@@ -2,6 +2,8 @@
 title: How to debug 3rd party libraries
 date: 2016-05-03T08:41:32-05:00
 layout: post
+tags:
+ - python
 ---
 
 # Problem

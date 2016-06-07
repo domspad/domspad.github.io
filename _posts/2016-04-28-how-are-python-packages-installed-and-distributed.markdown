@@ -2,6 +2,8 @@
 title: How are python packages installed and distributed?
 date: 2016-04-28T18:37:04-05:00
 layout: post
+tags:
+ - python
 ---
 
 How does your code go from a git repository to being installed on your system so that you can `import` it? I recently realized I didn't really understand the process. I knew it involved `setup.py` stuff, something called an `egg`, maybe `pip` if you're lucky.

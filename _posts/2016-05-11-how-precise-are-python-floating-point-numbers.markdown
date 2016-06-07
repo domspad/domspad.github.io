@@ -2,6 +2,8 @@
 title: How precise are Python floating point numbers?
 date: 2016-05-11T08:15:06-05:00
 layout: post
+tags:
+ - python
 ---
 
 A recent [project euler problem](http://projecteuler.net/problem=163) made me realize when precision matters with floating point numbers. Consider

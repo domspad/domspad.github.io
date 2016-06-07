@@ -2,6 +2,8 @@
 layout: post
 title: Python GUI programming
 date: 2016-04-26T06:55:04-05:00
+tags:
+ - python
 ---
 This one has to end on a cliff-hanger -- as most efforts do when trying to implement GUI programs it seems.
 
