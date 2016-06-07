@@ -1,0 +1,125 @@
+<html>
+
+    <body>
+        
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>StackOverflow Active Tag Counts</h3>
+                    <div id="tags-plot"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>StackExchange Active Community Counts</h3>
+                    <div id="global-plot"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script>
+        var socket = io('http://' + document.domain + ':' + location.port);
+
+        // connect to StackExchange sockets
+        var so_socket = new WebSocket("ws://qa.sockets.stackexchange.com/");
+        var counts = Object();
+        var tag_counts = Object();
+
+        function getSortedKeys(obj) {
+            // descending: obj[b] - obj[a]
+            // ascending: obj[a] - obj[b]
+            var keys = []; for(var key in obj) keys.push(key);
+            return keys.sort(function(a,b){return obj[b]-obj[a]});
+        }
+        // to begin feed we notify that we are looking for all active questions from all communities
+        // the "API" (no official one exists) can be found here
+        // http://meta.stackexchange.com/questions/218343/how-do-the-stack-exchange-websockets-work-what-are-all-the-options-you-can-send
+        so_socket.onopen = function()
+        {
+            so_socket.send("155-questions-active");
+        };
+        so_socket.onmessage = function(raw_data)
+        {
+            // get community from data
+            var data = JSON.parse(JSON.parse(raw_data["data"])["data"]);
+            var community = data["apiSiteParameter"];
+            
+
+            // update tag_counts if it is stackoverflow
+            if (community == "stackoverflow")
+            {
+                var tags_array = data["tags"]
+                // loop over tag array doing +1 to to each tag in tag_counts
+                array_length = tags_array.length;
+                for (var i = 0; i < array_length; i++)
+                {
+                    var t = tags_array[i];
+                    if (t in tag_counts)
+                    {
+                        tag_counts[t] += 1;
+                    }
+                    else
+                    {
+                        tag_counts[t] = 1;
+                    }
+                }
+            }
+            console.log(tag_counts);
+
+            // Redraw tags graph with top N tags
+            // var x = Object.keys(tag_counts)
+            var y = Array();
+            var sortedTags = getSortedKeys(tag_counts).slice(0,25)
+            for (var i in sortedTags)
+            {
+                y.push(tag_counts[sortedTags[i]]);
+            }
+
+            plot_data = [ {
+                x: sortedTags,
+                y: y,
+                type: 'bar'
+            }];
+            Plotly.newPlot("tags-plot",plot_data);
+
+
+            // update community counts
+            if (community in counts)
+            {
+                counts[community] += 1;
+            }
+            else
+            {
+                counts[community] = 1;
+            }
+            console.log(counts);
+
+
+
+            // Redraw communities graph
+            var x = Object.keys(counts);
+            var y = Array();
+            for (var i in counts)
+            {
+                y.push(counts[i]);
+            }
+
+            plot_data = [ {
+                x: x,
+                y: y,
+                type: 'bar'
+            } ];
+
+            Plotly.newPlot("global-plot", plot_data);
+        };
+
+        </script>
+    </body>
+</html>
