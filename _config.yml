@@ -24,3 +24,4 @@ markdown: kramdown
 # gems to include
 gems:
   - jekyll-sitemap
+  - jekyll-gist
