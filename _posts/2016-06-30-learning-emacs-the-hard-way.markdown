@@ -18,7 +18,7 @@ Well, the time has come, and I just started a strict diet of chicken and eggs (c
 
 2. How the heck do keep track of what you have in your kill-yank stream?! Okay you can treat it like a clipboard with memory, but honestly when will you go that far down the stack?
 
-3. `C-x ...` AND `M-x ... are such unnatural keyboard strokes for me, even after swapping `CTRL` with `CAPS LOCK`. Emacs-ers must have gymnastic pinkies.
+3. `C-x ...` AND `M-x ...` are such unnatural keyboard strokes for me, even after swapping `CTRL` with `CAPS LOCK`. Emacs-ers must have gymnastic pinkies.
 
 4. What do you mean "the buffer is still alive" when I kill the window it lived in? So much is going on behind the screen, that I just wanna crack 
 
