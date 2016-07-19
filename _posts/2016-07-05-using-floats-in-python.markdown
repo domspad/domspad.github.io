@@ -1,7 +1,7 @@
 ---
 
 title: Python math errors with decimals
-date: 2016-07-05T18:44:49-04:00
+date: 2016-07-19T18:44:49-04:00
 layout: post
 tags:
  - python
