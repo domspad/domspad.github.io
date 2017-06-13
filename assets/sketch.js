@@ -6,10 +6,9 @@
 PRIMES = primes_lt(10000);
 NUM = 2;
 prev_num = 5;
-//FPS = 10;
 
 function setup() {
-  createCanvas(1280, 720);
+  createCanvas(screen.width, window.innerHeight);
   clear();
   background(51);
   noLoop();
@@ -38,7 +37,7 @@ function draw() {
   ellipse(width/2, height/2,height/2, height/2);
   if(NUM > 1 && NUM % 1 === 0){
       sequence = factorize(NUM);
-     // sequence.reverse();
+      //sequence.reverse();
       render_seq(sequence);
   }
 }
