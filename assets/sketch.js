@@ -3,7 +3,8 @@
 */
 
 
-PRIMES = primes_lt(10000);
+LIMIT = 10000;
+PRIMES = primes_lt(LIMIT);
 NUM = 2;
 prev_num = 5;
 
@@ -16,7 +17,7 @@ function setup() {
   input = createInput();
   document.addEventListener('input', redraw);
   input.position(20,20);
-  input.value('6');
+  input.value('enter a number < 10,000');
 }
 COLORS = ['#96ceb4','#ffeead','#ff6f69','#ffcc5c'];
 Cidx = 0;
@@ -35,7 +36,7 @@ function draw() {
 
   fill(get_color());
   ellipse(width/2, height/2,height/2, height/2);
-  if(NUM > 1 && NUM % 1 === 0){
+  if(NUM > 1 && NUM < LIMIT + 1 && NUM % 1 === 0){
       sequence = factorize(NUM);
       //sequence.reverse();
       render_seq(sequence);
