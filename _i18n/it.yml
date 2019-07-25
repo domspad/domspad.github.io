@@ -1,0 +1,19 @@
+site:
+    title: Dominic
+    subtitle: Io sono fagiolo
+    email: abacd@gef.com
+    description: Sono un grande
+    baseurl: "" # the subpath of your site, e.g. /blog
+    url: # the base hostname & protocol for your site
+    author:
+    street_address: 1234 Somewhere Road
+    city: Nashville
+    state: TN
+    zip_code: 55555
+    country: United States of America
+    phone: (716) 555-5555
+
+menu: Menu
+title:
+    home: "Casa"
+    home_landing: "Ciao, Mi chiamo Domenico"

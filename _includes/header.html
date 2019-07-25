@@ -3,9 +3,12 @@
 
 <!-- Header -->
 <header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
-	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
+	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{% t site.title %}</strong> <span>{% t site.subtitle %}</span></a>
 	<nav>
-		<a href="#menu">Menu</a>
+        <a href="/hu/"><img src="{{site.baseurl_root}}/assets/images/hu.png"> HU</a>
+        <a href="/it/"><img src="{{site.baseurl_root}}/assets/images/it.png"/> IT</a>
+        <a href="/"><img src="{{site.baseurl_root}}/assets/images/en.png"/> EN</a>
+        <a href="#menu">{% t menu %}</a>
 	</nav>
 </header>
 
@@ -14,17 +17,16 @@
 	<ul class="links">
         {% for page in site.pages %}
 		    {% if page.layout == "home" %}
-		        <li><a href="{{ "" | absolute_url }}/">{{ page.title }}</a></li>
+            <li><a href="{{ site.baseurl_root }}">{% t page.title %}</a></li>
 	    	{% endif %}
 		{% endfor %}
 		{% for page in site.pages %}
 		    {% if page.layout != "home" and page.nav-menu == true %}
-		        <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.url }}">{% t page.title %}</a></li>
 		    {% endif %}
 		{% endfor %}
 	</ul>
-	<ul class="actions vertical">
-		<li><a href="#" class="button special fit">Get Started</a></li>
-		<li><a href="#" class="button fit">Log In</a></li>
+	 <ul class="actions vertical">
+        <li><a href="#contact" class="button special fit">{% t contact %}</a></li>
 	</ul>
 </nav>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Elements
+title: title.myservices
 nav-menu: true
 ---
 
