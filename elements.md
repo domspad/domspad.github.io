@@ -1,6 +1,6 @@
 ---
 layout: page
-title: My Services
+title: title.services
 nav-menu: true
 description: I offer these
 ---

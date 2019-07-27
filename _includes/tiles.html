@@ -6,7 +6,7 @@
         <img src="{{site.baseurl_root}}/{{ post.image }}" alt="" />
     </span>
     <header class="major">
-        <h3><a href="{{ site.baseurl_root}}/{{post.url}}" class="link">{% t post.title %}</a></h3>
+        <h3><a href="{{post.url}}" class="link">{% t post.title %}</a></h3>
       <p>{% t post.description %}</p>
     </header>
   </article>
@@ -19,7 +19,11 @@
       <img src="{{site.baseurl_root}}/{{ page.image }}" alt="" />
     </span>
     <header class="major">
-        <h3><a href="{{aite.baseurl_root}}/{{page.url}}" class="link">{% t page.title %}</a></h3>
+        {% if site.lang == "en" %}
+            <h3><a href="{{page.url}}" class="link">{% t page.title %}</a></h3>
+        {% else %}
+            <h3><a href="/{{ site.lang }}{{page.url}}" class="link">{% t page.title %}</a></h3>
+        {% endif %}
       <p>{% t page.description %}</p>
     </header>
   </article>
