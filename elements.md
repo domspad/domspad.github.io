@@ -1,7 +1,8 @@
 ---
 layout: page
-title: title.myservices
+title: My Services
 nav-menu: true
+description: I offer these
 ---
 
 <!-- Main -->

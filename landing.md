@@ -1,6 +1,6 @@
 ---
-title: title.translations
 layout: landing
+title: title.translations
 description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
 image: assets/images/blur.jpg
 nav-menu: true
