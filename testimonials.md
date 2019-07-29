@@ -3,7 +3,7 @@ layout: post
 title: title.testimonials
 description: Thoughts from great clients
 nav-menu: true
+show_tile: false
 ---
 
-Just a text
-<!--<blockquote>{% t testimonial_one %} </blockquote>-->
+testimonial_one

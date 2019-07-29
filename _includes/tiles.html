@@ -1,32 +1,35 @@
 <section id="one" class="tiles">
   {% for post in site.posts limit:site.tiles-count %}
-  {% if site.tiles-source == 'posts' %}
-  <article>
-    <span class="image">
-        <img src="{{site.baseurl_root}}/{{ post.image }}" alt="" />
-    </span>
-    <header class="major">
-        <h3><a href="{{post.url}}" class="link">{% t post.title %}</a></h3>
-      <p>{% t post.description %}</p>
-    </header>
-  </article>
-  {% endif %}
+      {% if site.tiles-source == 'posts' %}
+          <article>
+            <span class="image">
+                <img src="{{site.baseurl_root}}/{{ post.image }}" alt="" />
+            </span>
+            <header class="major">
+                <h3><a href="{{post.url}}" class="link">{% t post.title %}</a></h3>
+              <p>{% t post.description %}</p>
+            </header>
+          </article>
+      {% endif %}
   {% endfor %}
-  {% for page in site.pages limit:site.tiles-count %}
-  {% if site.tiles-source == 'pages' and page.show_tile != false %}
-  <article>
-    <span class="image">
-      <img src="{{site.baseurl_root}}/{{ page.image }}" alt="" />
-    </span>
-    <header class="major">
-        {% if site.lang == "en" %}
-            <h3><a href="{{page.url}}" class="link">{% t page.title %}</a></h3>
-        {% else %}
-            <h3><a href="/{{ site.lang }}{{page.url}}" class="link">{% t page.title %}</a></h3>
-        {% endif %}
-      <p>{% t page.description %}</p>
-    </header>
-  </article>
-  {% endif %}
+  {% for page in site.pages %}
+      {% if site.tiles-source == 'pages' and page.show_tile != false %}
+         {% assign main="main.scss" %}
+         {% unless page.name contains main %}
+          <article>
+            <span class="image">
+              <img src="{{site.baseurl_root}}/{{ page.image }}" alt="" />
+            </span>
+            <header class="major">
+                {% if site.lang == "en" %}
+                    <h3><a href="{{page.url}}" class="link">{% t page.title %}</a></h3>
+                {% else %}
+                    <h3><a href="/{{ site.lang }}{{page.url}}" class="link">{% t page.title %}</a></h3>
+                {% endif %}
+              <p>{% t page.description %}</p>
+            </header>
+          </article>
+          {% endunless %}
+      {% endif %}
   {% endfor %}
 </section>

@@ -48,3 +48,5 @@ rooturl:
     en: ""
     hu: "/hu"
     it: "/it"
+
+excerpt_separator: <!--more-->

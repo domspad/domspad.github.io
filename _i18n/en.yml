@@ -23,6 +23,9 @@ title:
     home: "Home"
     home_landing: "Hi, My name is Dominic"
 
+description:
+    translations: Some sample translations
+
 
 
 translations: "Translations"
