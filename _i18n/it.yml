@@ -13,7 +13,23 @@ site:
     country: United States of America
     phone: (716) 555-5555
 
-menu: Menu
 title:
     home: "Casa"
     home_landing: "Ciao, Mi chiamo Domenico"
+    testimonials: "Dicono di me"
+    aboutme: "Chi sono"
+    blog: "Blog"
+    myservices: "Cosa faccio"
+    services: "Cosa faccio"
+    translations: "Esempi"
+
+description:
+    translations: Some sample translations
+
+translations: "Esempi"
+menu: "Menu"
+testimonials: "Dicono di me"
+testimonial_one: "Dominic is an excellent translator, friendly and always ready to help. Highly recommended! - IGMA Co."
+contact: "Contatti"
+read_more: "Read more"
+
