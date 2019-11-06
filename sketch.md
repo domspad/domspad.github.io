@@ -1,7 +1,5 @@
 ---
 layout: null
-title: sketch
-permalink: /sketch
 ---
 
 <html>
