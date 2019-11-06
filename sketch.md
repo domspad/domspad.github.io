@@ -1,6 +1,9 @@
+---
 layout: null
 title: sketch
-permalink: /sketch/
+permalink: /sketch
+---
+
 <html>
 <head>
   <meta charset="UTF-8">
